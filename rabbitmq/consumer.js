@@ -11,10 +11,10 @@
  */
 /** Consumer API for RabbitMQ */
 
-exports.startReceive = function(queue){
-	return org.eclipse.dirigible.api.rabbitmq.RabbitMQFacade.startReceive(queue);
+exports.startListening = function(queue, handler){
+	return org.eclipse.dirigible.api.rabbitmq.RabbitMQFacade.startListening(queue, handler);
 }
 
-exports.stopReceive = function(queue){
-	return org.eclipse.dirigible.api.rabbitmq.RabbitMQFacade.stopReceive(queue);
+exports.stopListening = function(queue, handler){
+	return org.eclipse.dirigible.api.rabbitmq.RabbitMQFacade.stopListening(queue, handler);
 }
